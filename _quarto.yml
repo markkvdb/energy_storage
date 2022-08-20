@@ -1,0 +1,38 @@
+ipynb-filters: [nbdev_filter]
+
+project:
+  type: website
+  output-dir: _docs
+  preview:
+    port: 3000
+    browser: false
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 4
+
+website:
+  title: "energy_storage"
+  site-url: "https://markkvdb.github.io/energy_storage"
+  description: "Analyses and tools related to energy storage."
+  twitter-card: true
+  open-graph: true
+  reader-mode: true
+  repo-branch: master
+  repo-url: "https://github.com/markkvdb/energy_storage"
+  repo-actions: [issue]
+  navbar:
+    background: primary
+    search: true
+    right:
+      - icon: github
+        href: "https://github.com/markkvdb/energy_storage"
+  sidebar:
+    style: "floating"
+
+metadata-files: 
+  - sidebar.yml
+  - custom.yml
