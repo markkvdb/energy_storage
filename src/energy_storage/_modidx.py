@@ -32,4 +32,6 @@ d = { 'settings': { 'allowed_cell_metadata_keys': '',
                 'tst_flags': 'notest',
                 'user': 'markkvdb',
                 'version': '0.0.1'},
-  'syms': {'energy_storage.optimal_dispatch': {'energy_storage.optimal_dispatch.foo': 'https://markkvdb.github.io/optimal_dispatch.html#foo'}}}
+  'syms': { 'energy_storage.data': { 'energy_storage.data.get_production': 'https://markkvdb.github.io/data.html#get_production',
+                                     'energy_storage.data.get_spot_price': 'https://markkvdb.github.io/data.html#get_spot_price'},
+            'energy_storage.optimal_dispatch': {}}}

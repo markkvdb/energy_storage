@@ -3,3 +3,4 @@ website:
     contents:
       - index.ipynb
       - 01_optimal_dispatch.ipynb
+      - 02_data.ipynb
