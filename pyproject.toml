@@ -3,6 +3,9 @@ name = "energy_storage"
 version = "0.0.1"
 description = "Energy storage tools"
 authors = ["markkvdb <github@mvanderbroek.com>"]
+packages = [
+    { include = "energy_storage", from = "src" },
+]
 
 [tool.poetry.dependencies]
 python = ">=3.9,<4.0"
