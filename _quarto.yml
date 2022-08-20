@@ -21,7 +21,7 @@ website:
   twitter-card: true
   open-graph: true
   reader-mode: true
-  repo-branch: master
+  repo-branch: main
   repo-url: "https://github.com/markkvdb/energy_storage"
   repo-actions: [issue]
   navbar:
