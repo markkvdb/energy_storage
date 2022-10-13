@@ -10,10 +10,10 @@ packages = [
 [tool.poetry.dependencies]
 python = ">=3.9,<4.0"
 pandas = "^1.4.3"
-nbdev = "^2.3.7"
 
-[tool.poetry.dev-dependencies]
-nbdev = "^2.2.5"
+[tool.poetry.group.dev.dependencies]
+notebook = "^6.5.1"
+nbdev = "^2.3.7"
 ipykernel = "^6.15.1"
 black = "^22.6.0"
 isort = "^5.10.1"

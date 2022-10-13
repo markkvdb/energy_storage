@@ -25,7 +25,8 @@ def redistribute_daily_production(
         .reset_index()
         .merge(df_hour, how="left", on="hour")
         .set_index("time")
-        .groupby(pd.Grouper(freq="1d"))
+        .groupby(pd.Grouper(freq="1d"), group_keys=False)
         .apply(lambda d: d["distribution"] * d["prod"].sum())
+        .to_frame("prod")
     )
 
