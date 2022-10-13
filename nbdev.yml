@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "energy_storage"
+  site-url: "https://markkvdb.github.io/energy_storage"
+  description: "Analyses and tools related to energy storage."
+  repo-branch: main
+  repo-url: "https://github.com/markkvdb/energy_storage"
