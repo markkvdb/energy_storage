@@ -8,15 +8,29 @@ from fastcore.utils import *
 from fastcore.test import *
 import pandas as pd
 
+
 # %% ../../nbs/02_data.ipynb 6
 def get_spot_price() -> pd.Series:
     """Load french spot price data."""
-    return pd.read_csv("data/spot_price.csv", index_col=0, parse_dates=[0], date_parser=lambda d: pd.to_datetime(d, utc=True))["spot_price"].tz_convert("Europe/Paris")
+    df = pd.read_csv("data/spot_price.csv", index_col=0)["spot_price"]
+    df.index = pd.to_datetime(df.index, utc=True)
+    df = df.tz_convert("Europe/Paris")
+
+    return df
+
 
 # %% ../../nbs/02_data.ipynb 14
 def get_production(site_id: int = 1) -> pd.Series:
     """Get production data for site `site_id`."""
     if site_id != 1:
         raise ValueError("Sites with id different than 1 currently not supported.")
-    
-    return pd.read_csv(f"data/production_{site_id}.csv", index_col=0, parse_dates=[0], date_parser=lambda d: pd.to_datetime(d, utc=True))["prod"].tz_convert("Europe/Paris")
+
+    df = pd.read_csv(
+        f"data/production_{site_id}.csv",
+        index_col=0,
+    )["prod"]
+    df.index = pd.to_datetime(df.index, utc=True)
+    df = df.tz_convert("Europe/Paris")
+
+    return df
+
